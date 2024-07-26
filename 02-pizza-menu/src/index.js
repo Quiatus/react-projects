@@ -28,25 +28,31 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our menu</h2>
+
       {numPizzas > 0 ? (
+
+      <>  
+        <p>
+          Authentic Italian cuisine. Six creative dishes to choose from. All from our stone oven, all organic, all delicious. 
+        </p>
+
         <ul className="pizzas">
           {pizzaData.map(pizza => <Pizza pizzaObj={pizza} key={pizza.name}/>)}
         </ul>
+      </>
       ) : <p>We're still working on our menu. Please check back later.</p>}
     </main>
   )
 }
 
-function Pizza(props) {
-  if (props.pizzaObj.soldOut) return null
-
+function Pizza({pizzaObj}) {
   return (
-    <li className="pizza">
-      <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name}/>
+    <li className={`pizza ${ pizzaObj.soldOut ? 'sold-out' : ''}`}>
+      <img src={pizzaObj.photoName} alt={pizzaObj.name}/>
       <div>
-        <h3>{props.pizzaObj.name}</h3>
-        <p>{props.pizzaObj.ingredients}</p>
-        <span>{props.pizzaObj.price}</span>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>{pizzaObj.soldOut ? 'SOLD OUT' : pizzaObj.price}</span>
       </div>
     </li> 
   )
@@ -62,15 +68,15 @@ function Footer() {
     <footer>
       {isOpen 
         ? <Order closeHour={closeHour} />
-        : <p>We are happy to welcome you between {openHour}:00 and {closeHour}:00.</p>}
+        : <p>We are happy to welcome you from {openHour}:00 to {closeHour}:00.</p>}
     </footer>
   )
 }
 
-function Order(props) {
+function Order({ closeHour }) {
   return (
     <div className="order">
-      <p>We are open until {props.closeHour}:00. Come visit us or order online.</p>
+      <p>We are open until {closeHour}:00. Come visit us or order online.</p>
       <button className="btn">Order</button>
     </div>
   )
