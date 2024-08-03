@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #202020;
   color: aliceblue;
   display: flex;
@@ -20,7 +20,7 @@ body {
 }
 
 main {
-  width: 60rem;
+  width: 120rem;
   /* border: 1px solid #777; */
   background-color: #282828;
   border-radius: 2rem;
@@ -69,6 +69,14 @@ main {
   gap: 1rem;
 }
 
+.dateString {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .counterLine:first-of-type {
   margin-bottom: .5rem;
 }
@@ -85,12 +93,88 @@ main {
   height: 2.5rem;
 }
 
+.btnB {
+  background-color: #282828;
+  border: 1px solid #555;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 1px 1px 1px #555;
+  color: #FFF;
+  font-size: 1.5rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+}
+
+
 .btn:hover {
   border-color: #777;
 }
 
 .btn:active {
   transform: scale(.95);
+}
+
+input[type='text'] {
+  background-color: inherit;
+  border: 1px solid #555;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.7rem;
+  padding: 0 .5rem;
+  width: 15rem;
+  outline: none;
+}
+
+input[type="range"] {
+  outline: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 18rem;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #555;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  margin-top: -5px; 
+  background-color: #DDD;
+  border-radius: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.flashcards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, minmax(11rem, max-content));
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.card {
+  border: 1px solid #777;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #333;
+}
+
+.card.selected {
+  background-color: #777;
+  color: #FFF;
 }
 
 .bb { border-bottom: 1px solid #DDD}

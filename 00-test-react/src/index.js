@@ -1,7 +1,7 @@
 import React from 'react';
-import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-
+import Counter from './components/Counter'; 
+import Flashcards from './components/Flashcards';
 import './index.css';
 
 const text = [
@@ -39,6 +39,7 @@ function Main() {
         }
       </div>
       <Counter />
+      <Flashcards />
     </main>
   )
 }
@@ -52,47 +53,6 @@ function TextBloc({ title, text }) {
     <div className='textBlock'>
       <h2>{title}</h2>
       <p>{text}</p>
-    </div>
-  )
-}
-
-function Counter() {
-  const today = new Date()
-
-  const [step, setStep] = useState(1)
-  const [count, setCount] = useState(0)
-
-  function changeStep(type) {
-    if (type === 'dec' && step > 1) setStep((s) => s - 1)
-    if (type === 'inc') setStep((s) => s + 1)
-  }
-
-  function changeCount(type) {
-    if (type === 'dec') setCount((s) => s - step)
-    if (type === 'inc') setCount((s) => s + step)
-  }
-
-  function getDateDifference() {
-    const date = new Date()
-    date.setDate(date.getDate() + count)
-    return date.toDateString()
-  }
-
-  return (
-    <div className='counter bb'>
-      <div className='counterLine'>
-        <button className='btn' onClick={() => changeStep('dec')}>-</button>
-        <button className='btn' onClick={() => changeStep('inc')}>+</button>
-        <span>Step:</span><span className='fb'>{step}</span>
-      </div>
-      <div className='counterLine mbm'>
-        <button className='btn' onClick={() => changeCount('dec')}>-</button>
-        <button className='btn' onClick={() => changeCount('inc')}>+</button>
-        <span>Count:</span><span className='fb'>{count}</span>
-      </div>
-      <div className='dateString '>
-        <span>{count === 0 ? `Today is ${today.toDateString()}` : `${Math.abs(count)} day${count === 1 || count === -1 ? '' : 's'} ${count < 1 ? 'ago' : ''} from today ${count < 1 ? 'was' : 'will be'} ${getDateDifference()}`}</span>
-      </div>
     </div>
   )
 }
