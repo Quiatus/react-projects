@@ -16,6 +16,11 @@ export default function Counter() {
     return date.toDateString()
   }
 
+  function handleReset() {
+    setStep(1)
+    setCount(0)
+  }
+
   return (
     <div className='counter bb mb'>
       <div className='counterLine'>
@@ -29,7 +34,7 @@ export default function Counter() {
       </div>
       <div className='dateString '>
         <span>{count === 0 ? `Today is ${today.toDateString()}` : `${Math.abs(count)} day${count === 1 || count === -1 ? '' : 's'} ${count < 1 ? 'ago' : ''} from today ${count < 1 ? 'was' : 'will be'} ${getDateDifference()}`}</span>
-        <button className='btnB' onClick={() => setCount(0)}>Reset</button>
+        {count === 0 ? null : <button className="btnB" onClick={() => handleReset()}>Reset</button>}
       </div>
     </div>
   )
