@@ -121,7 +121,11 @@ input[type="checkbox"] {
   border: none;
   font-size: 1.8rem;
   padding: 0.8rem;
-  transform: translateY(2px);
+  transform: translateY(2px); 
+}
+
+.list li button:hover {
+  filter: brightness(1.5);
 }
 
 .stats {
