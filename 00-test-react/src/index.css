@@ -38,6 +38,74 @@ main {
   margin-bottom: 2rem;
 }
 
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* ACCORDION STLYES */
+
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  box-shadow: 0 .5rem 1.5rem rgba(255, 255, 255, 0.2);
+  padding: 20px 24px;
+  padding-right: 48px;
+  cursor: pointer;
+  border-top: 3px solid #777; 
+  /* border-top-width: 2px; */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 3rem 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title,
+.icon {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #CCC;
+}
+ 
+.number {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #777;
+}
+
+.content-box {
+  grid-column: 2 / -1;
+  padding-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+.content-box ul {
+  color: #868e96;
+  margin-left: 16px;
+  margin-top: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.open .title {
+  color: #FFF;
+}
+
+.open {
+  border-top: 3px solid #FFF;
+}
+
+/* ---------------- */
+
 .textBlock {
   margin-bottom: 2rem;
 }
