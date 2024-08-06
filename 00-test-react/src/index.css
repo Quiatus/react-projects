@@ -16,16 +16,23 @@ body {
   color: aliceblue;
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin: 4rem 0;
 }
 
-main {
-  width: 120rem;
-  /* border: 1px solid #777; */
+.main {
+  width: 160rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: start;
+}
+
+.comp {
   background-color: #282828;
   border-radius: 2rem;
   box-shadow: 0 0 5rem #080808;
-  padding: 1rem 2rem;
+  padding: 2rem;
+  height: fit-content;
 }
 
 .h1 {
@@ -35,25 +42,20 @@ main {
   text-shadow: 0 0 1px #FFFFFFAA, 0 0 0 #000;
   line-height: 1;
   text-align: center;
-  margin-bottom: 2rem;
-}
-
-.top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 /* ACCORDION STLYES */
 
 .accordion {
-  width: 100%;
+  width: 70rem;
   display: flex;
   flex-direction: column;
 }
 
 .item {
-  box-shadow: 0 .5rem 1.5rem rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.2);
+  border-radius: .5rem;
   padding: 20px 24px;
   padding-right: 48px;
   cursor: pointer;
@@ -64,6 +66,10 @@ main {
   gap: 3rem 2rem;
   align-items: center;
   margin-bottom: 2rem;
+}
+
+.item:last-of-type {
+  margin-bottom: 0;
 }
 
 .title,
@@ -102,11 +108,16 @@ main {
 
 .open {
   border-top: 3px solid #FFF;
+  box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.5);
 }
 
 /* ---------------- */
 
-.textBlock {
+.text-bloc {
+  width: 60rem;
+}
+
+.textBlock:not(:last-of-type) {
   margin-bottom: 2rem;
 }
 
@@ -121,19 +132,16 @@ main {
 }
 
 .counter {
+  width: 45rem;
   display: flex;
   flex-direction: column;
   font-size: 2rem;
   align-items: center;
   justify-content: center;
-  padding-bottom: 2rem;
 }
 
 .counterLine {
-  display: grid;
-  width: 20rem;
-  grid-template-columns: repeat(2, min-content) 6rem 1fr;
-  align-items: center;
+  display: flex;
   gap: 1rem;
 }
 
@@ -217,6 +225,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .flashcards {
+  width: 90rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, minmax(11rem, max-content));

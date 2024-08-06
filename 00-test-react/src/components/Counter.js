@@ -22,7 +22,7 @@ export default function Counter() {
   }
 
   return (
-    <div className='counter bb mb'>
+    <div className='counter comp'>
       <div className='counterLine'>
         <input type="range" min='1' max='10' value={step}  onChange={(e) => changeStep(Number(e.target.value))}/>
         <span className='fb'>{step}</span>
