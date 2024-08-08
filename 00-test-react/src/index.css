@@ -254,7 +254,42 @@ input[type="range"]::-webkit-slider-thumb {
   color: #FFF;
 }
 
+.tipcalc {
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.form-line {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-line > input[type="text"] {
+  width: 20rem;
+}
+
+select {
+  background-color: inherit;
+  color: inherit;
+  font: inherit;
+}
+
+option {
+  background-color: #333;
+}
+
+.total {
+  margin: 1rem 0;
+  line-height: 1;
+  font-size: 2.2rem;
+}
+
 .bb { border-bottom: 1px solid #DDD}
 .mb { margin-bottom: 2rem }
 .mbm { margin-bottom: 1rem }
 .fb { font-weight: 700 }
+.center {text-align: center}
