@@ -65,7 +65,7 @@ body {
 
   padding: 1.2rem;
   border-radius: 7px;
-  transition: 0.5s;
+  transition: .3s;
 }
 
 .selected,
