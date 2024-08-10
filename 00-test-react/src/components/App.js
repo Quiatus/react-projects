@@ -3,6 +3,7 @@ import Flashcards from './Flashcards';
 import Accordeon from './Accordeon';
 import TextBloc from './TextBloc';
 import TipCalculator from './TipCalculator'
+import Units from './Units';
 import { text, faqs, questions } from './data';
 
 export default function App() {
@@ -13,8 +14,9 @@ export default function App() {
       <TextBloc data={text}/>
       <Accordeon data={faqs}/>
       <Counter />
-      <TipCalculator />
+      <Units />
       <Flashcards data={questions}/>
+      <TipCalculator />
     </div>
     </>
   );

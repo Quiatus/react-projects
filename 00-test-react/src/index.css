@@ -288,6 +288,10 @@ option {
   font-size: 2.2rem;
 }
 
+.units {
+  width: 85rem;
+}
+
 .bb { border-bottom: 1px solid #DDD}
 .mb { margin-bottom: 2rem }
 .mbm { margin-bottom: 1rem }
