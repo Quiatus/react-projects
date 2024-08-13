@@ -4,7 +4,8 @@ import Accordeon from './Accordeon';
 import TextBloc from './TextBloc';
 import TipCalculator from './TipCalculator'
 import Units from './Units';
-import { text, faqs, questions } from './data';
+import TextExpander from './TextExpander';
+import { text, faqs, questions, expanderText } from './data';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Units />
       <Flashcards data={questions}/>
       <TipCalculator />
+      <TextExpander data={expanderText}/>
     </div>
     </>
   );

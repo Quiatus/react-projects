@@ -292,6 +292,20 @@ option {
   width: 85rem;
 }
 
+.text-expander {
+  width: 100rem;
+  font-size: 1.4rem;
+}
+
+.text-expander > div:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.collapse-text {
+  cursor: pointer;
+  font-weight: 500;
+}
+
 .bb { border-bottom: 1px solid #DDD}
 .mb { margin-bottom: 2rem }
 .mbm { margin-bottom: 1rem }
