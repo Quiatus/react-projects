@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { tempMovieData, tempWatchedData } from "./data";
+// import { tempMovieData, tempWatchedData } from "./data";
 import { NavBar, Logo, Search, NumResults } from "./NavBar";
 import { MovieList } from "./ListBox";
 import { WatchList, WatchedSummary } from "./WatchedBox";

@@ -9,7 +9,7 @@ export function MovieDetails({ selectedId, onCloseMovie }) {
 
   const {
     Title: title, 
-    Year: year,
+    // Year: year,
     Poster: poster,
     Runtime: runtime,
     imdbRating,
@@ -49,7 +49,7 @@ export function MovieDetails({ selectedId, onCloseMovie }) {
 
         <section>
           <div className="rating">
-            <StarRating maxRating={10} size={24} />
+            <StarRating maxRating={10} size={28} />
           </div>
           <p><em>{plot}</em></p>
           <p>Starring {actors}</p>
