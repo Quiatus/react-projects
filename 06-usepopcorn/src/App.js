@@ -3,20 +3,31 @@ import { tempMovieData, tempWatchedData } from "./data";
 import { NavBar, Logo, Search, NumResults } from "./NavBar";
 import { MovieList } from "./ListBox";
 import { WatchList, WatchedSummary } from "./WatchedBox";
+import { MovieDetails } from "./MovieDetails";
 import { KEY } from "./utils";
+import { Loader, ErrorMessage } from "./Reusables";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
   const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
+  const [query, setQuery] = useState("");
+  const [selectedId, setSelectedId] = useState(null)
 
-  const query = 'Fuckoffguysgoodday'
+  function handleSelectMovie(id) {
+    setSelectedId(selectedId => id === selectedId ? null : id)
+  }
+
+  function handleCloseMovie() {
+    setSelectedId(null)
+  }
 
   useEffect(() => {
     async function fetchMovies() {
       try {
         setIsLoading(true)
+        setError("")
 
         const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=${query}`)
         if (!res.ok) throw new Error('Something went wrong!')
@@ -26,21 +37,26 @@ export default function App() {
 
         setMovies(data.Search)
       } catch (err) {
-        console.error(err.message)
         setError(err.message)
       } finally {
         setIsLoading(false)
       }
     }
 
+    if (query.length < 3) {
+      setMovies([])
+      setError('')
+      return
+    }
+
     fetchMovies()
-  }, [])
+  }, [query])
 
   return (
     <>
       <NavBar>
         <Logo />
-        <Search />
+        <Search query={query} setQuery={setQuery}/>
         <NumResults movies={movies}/>
       </NavBar>
 
@@ -48,7 +64,7 @@ export default function App() {
         <Box>
           {/* {isLoading ? <Loader /> : <MovieList movies={movies}/>} */}
           {isLoading && <Loader />}
-          {!isLoading && !error && <MovieList movies={movies}/>}
+          {!isLoading && !error && <MovieList movies={movies} onSelectMovie={handleSelectMovie}/>}
           {error && <ErrorMessage message={error} />}
         </Box>
         {/* 
@@ -63,20 +79,17 @@ export default function App() {
         
         */}
         <Box>
-          <WatchedSummary watched={watched} />
-          <WatchList watched={watched} />
+          {
+            selectedId ? <MovieDetails selectedId={selectedId} onCloseMovie={handleCloseMovie}/> :
+            <>
+              <WatchedSummary watched={watched} />
+              <WatchList watched={watched} />
+            </>
+          }
         </Box>
       </Main>
     </>
   );
-}
-
-function Loader(){
-  return <p className="loader">Loading...</p>
-}
-
-function ErrorMessage({message}) {
-  return <p className="error">{message}</p>
 }
 
 function Main({ children }) {
