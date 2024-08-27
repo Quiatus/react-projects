@@ -306,6 +306,22 @@ option {
   font-weight: 500;
 }
 
+.curr {
+  width: 35rem;
+  font-size: 1.6rem;
+}
+
+.curr > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.curr > p {
+  font-weight: 700;
+}
+
 .bb { border-bottom: 1px solid #DDD}
 .mb { margin-bottom: 2rem }
 .mbm { margin-bottom: 1rem }
