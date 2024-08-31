@@ -181,12 +181,11 @@ body {
   border-radius: .5rem;
 }
 
-
-.btn:hover {
+.btn:hover, .btnB:hover {
   border-color: #777;
 }
 
-.btn:active {
+.btn:active, .btnB:active {
   transform: scale(.95);
 }
 
@@ -320,6 +319,28 @@ option {
 
 .curr > p {
   font-weight: 700;
+}
+
+.geo {
+  width: 40rem;
+}
+
+.geo > p {
+  font-size: 1.6rem;
+}
+
+.geo > p:not(:last-of-type) {
+  margin: 1rem 0;
+}
+
+a, a:visited {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+a:hover {
+  color: gold;
+
 }
 
 .bb { border-bottom: 1px solid #DDD}

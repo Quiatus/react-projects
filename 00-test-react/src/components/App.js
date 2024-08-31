@@ -6,6 +6,7 @@ import TipCalculator from './TipCalculator'
 import Units from './Units';
 import TextExpander from './TextExpander';
 import Currency from './Currency'
+import Geoloc from './Geoloc';
 import { text, faqs, questions, expanderText } from './data';
 
 export default function App() {
@@ -16,11 +17,12 @@ export default function App() {
       <TextBloc data={text}/>
       <Accordeon data={faqs}/>
       <Counter />
-      <Units />
+      <Currency/>
+      <Geoloc />
       <Flashcards data={questions}/>
       <TipCalculator />
       <TextExpander data={expanderText}/>
-      <Currency/>
+      <Units />
     </div>
     </>
   );
