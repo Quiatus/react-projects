@@ -189,6 +189,14 @@ body {
   transform: scale(.95);
 }
 
+.btnB:disabled, 
+.btnB:disabled:active,
+.btnB:disabled:hover {
+  color: #777;
+  transform: scale(1);
+  border-color: #555;
+}
+
 input[type='text'] {
   background-color: inherit;
   border: 1px solid #555;
@@ -331,6 +339,29 @@ option {
 
 .geo > p:not(:last-of-type) {
   margin: 1rem 0;
+}
+
+.bank {
+  width: 50rem;
+}
+
+.bank-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr;
+  align-items: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.bank-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 3rem;
+  margin-bottom: 1rem;
+}
+
+.bank > p {
+  font-size: 1.5rem;
 }
 
 a, a:visited {

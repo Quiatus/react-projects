@@ -7,6 +7,7 @@ import Units from './Units';
 import TextExpander from './TextExpander';
 import Currency from './Currency'
 import Geoloc from './Geoloc';
+import BankAccount from './BankAccount';
 import { text, faqs, questions, expanderText } from './data';
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
       <Flashcards data={questions}/>
       <TipCalculator />
       <TextExpander data={expanderText}/>
+      <BankAccount />
       <Units />
     </div>
     </>
