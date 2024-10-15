@@ -23,7 +23,7 @@ function City() {
     getCity(id)
   }, [id])
 
-  const flagemojiToPNG = (country) => <img src={`https://flagcdn.com/24x18/${country}.png`} alt='flag' />
+  const flagemojiToPNG = () => <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt={countryCode} />
 
   if (isLoading) return <Spinner />
 
@@ -32,7 +32,7 @@ function City() {
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          <span>{flagemojiToPNG(countryCode)}</span> {cityName}
+          <span>{flagemojiToPNG()}</span> {cityName}
         </h3>
       </div>
 

@@ -17,7 +17,7 @@ export default function CountryList() {
 
   const countries = cities.reduce((arr, city) => 
     !arr.map(el => el.country).includes(city.country) 
-      ? [...arr, {country: city.country, emoji: city.emoji}]
+      ? [...arr, {country: city.country, countryCode: city.countryCode}]
       : arr,
     [])
 

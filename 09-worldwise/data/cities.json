@@ -1,40 +1,40 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "countryCode": "pt",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "countryCode": "es",
-      "date": "2027-07-15T08:22:53.976Z",
+      "id": "c564",
+      "cityName": "Heerhugowaard",
+      "country": "Netherlands (Kingdom of the)",
+      "countryCode": "NL",
+      "date": "2024-10-15T19:52:19.456Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
+        "lat": "52.65889295932542",
+        "lng": "4.858703613281251"
+      }
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "countryCode": "de",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "id": "9de3",
+      "cityName": "Prague",
+      "country": "Czechia",
+      "countryCode": "CZ",
+      "date": "2024-10-15T19:57:07.793Z",
+      "notes": "",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
+        "lat": "50.100008993272695",
+        "lng": "14.607152783357936"
+      }
+    },
+    {
+      "id": "4088",
+      "cityName": "Bourges",
+      "country": "France",
+      "countryCode": "FR",
+      "date": "2024-10-15T20:10:32.434Z",
+      "notes": "",
+      "position": {
+        "lat": "47.081344869872055",
+        "lng": "2.4636840820312504"
+      }
     }
   ]
 }

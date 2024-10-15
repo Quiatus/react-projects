@@ -9,7 +9,7 @@ import Button from "./Button";
 
 export default function Map() {
   const {cities} = useCities()
-  const [mapPosition, setMapPosition] = useState([40, 0])
+  const [mapPosition, setMapPosition] = useState([51, 0])
   const {isLoading: isLoadingPos, position: geolocPos, getPosition} = useGeolocation()
   const [lat, lng] = useUrlPosition()
 
