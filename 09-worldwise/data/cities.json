@@ -1,39 +1,15 @@
 {
   "cities": [
     {
-      "id": "c564",
+      "id": "3dcf",
       "cityName": "Heerhugowaard",
       "country": "Netherlands (Kingdom of the)",
       "countryCode": "NL",
-      "date": "2024-10-15T19:52:19.456Z",
+      "date": "2024-10-16T13:32:47.607Z",
       "notes": "",
       "position": {
-        "lat": "52.65889295932542",
-        "lng": "4.858703613281251"
-      }
-    },
-    {
-      "id": "9de3",
-      "cityName": "Prague",
-      "country": "Czechia",
-      "countryCode": "CZ",
-      "date": "2024-10-15T19:57:07.793Z",
-      "notes": "",
-      "position": {
-        "lat": "50.100008993272695",
-        "lng": "14.607152783357936"
-      }
-    },
-    {
-      "id": "4088",
-      "cityName": "Bourges",
-      "country": "France",
-      "countryCode": "FR",
-      "date": "2024-10-15T20:10:32.434Z",
-      "notes": "",
-      "position": {
-        "lat": "47.081344869872055",
-        "lng": "2.4636840820312504"
+        "lat": "52.660558891517645",
+        "lng": "4.831237792968751"
       }
     }
   ]
