@@ -16,15 +16,17 @@ const formatDate = (date) =>
 function City() {
   const {id} = useParams()
   const {getCity, currentCity, isLoading} = useCities()
-
-  const { cityName, countryCode, date, notes } = currentCity;
-
+  
   useEffect(() => {
     getCity(id)
   }, [id])
-
-  const flagemojiToPNG = () => <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt={countryCode} />
-
+  
+  const { cityName, countryCode, date, notes } = currentCity;
+  
+  function flag() {
+    if (countryCode) return <img src={`https://flagcdn.com/24x18/${countryCode.toLowerCase()}.png`} />
+  }
+  
   if (isLoading) return <Spinner />
 
   return (
@@ -32,7 +34,7 @@ function City() {
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          <span>{flagemojiToPNG()}</span> {cityName}
+          <span>{flag()}</span> {cityName}
         </h3>
       </div>
 

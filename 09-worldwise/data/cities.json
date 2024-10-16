@@ -1,15 +1,15 @@
 {
   "cities": [
     {
-      "id": "3dcf",
-      "cityName": "Heerhugowaard",
-      "country": "Netherlands (Kingdom of the)",
-      "countryCode": "NL",
-      "date": "2024-10-16T13:32:47.607Z",
+      "id": "3d8b",
+      "cityName": "Winterbourne Abbas",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "countryCode": "GB",
+      "date": "2024-10-16T17:15:46.489Z",
       "notes": "",
       "position": {
-        "lat": "52.660558891517645",
-        "lng": "4.831237792968751"
+        "lat": "50.726024296594694",
+        "lng": "-2.5653076171875004"
       }
     }
   ]
