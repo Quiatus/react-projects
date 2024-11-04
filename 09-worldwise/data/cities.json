@@ -11,6 +11,18 @@
         "lat": "50.726024296594694",
         "lng": "-2.5653076171875004"
       }
+    },
+    {
+      "id": "a37c",
+      "cityName": "Amsterdam",
+      "country": "Netherlands (Kingdom of the)",
+      "countryCode": "NL",
+      "date": "2024-11-04T11:44:17.571Z",
+      "notes": "",
+      "position": {
+        "lat": "52.37559917665913",
+        "lng": "4.877929687500001"
+      }
     }
   ]
 }
