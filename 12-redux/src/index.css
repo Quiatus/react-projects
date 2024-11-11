@@ -73,7 +73,7 @@ button:active {
 
 .balance-display {
   position: absolute;
-  top: 10%;
+  top: 2rem;
   right: 0;
   background-color: transparent;
   padding: 1rem;
