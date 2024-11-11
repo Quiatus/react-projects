@@ -17,8 +17,8 @@ function AccountOperations() {
 
   return (
     <div>
-      <h2>Your account operations</h2>
       <div className="inputs">
+      <h4>Your account operations</h4>
         <div>
           <label>Deposit</label>
           <input

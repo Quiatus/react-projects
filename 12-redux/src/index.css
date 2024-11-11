@@ -24,6 +24,10 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.h-marg {
+  margin: 1rem 0;
+}
+
 input,
 select {
   margin: 0 8px;
@@ -32,6 +36,11 @@ select {
   background-color: #444;
   border: none;
   color: #DDD;
+  outline: none;
+}
+
+.error {
+  outline: 1px solid red;
 }
 
 button {
@@ -64,10 +73,10 @@ button:active {
 
 .balance-display {
   position: absolute;
-  top: 45%;
+  top: 10%;
   right: 0;
-  background-color: #111;
-  padding: 24px 32px;
+  background-color: transparent;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   max-width: fit-content;
