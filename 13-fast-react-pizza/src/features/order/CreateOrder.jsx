@@ -1,17 +1,19 @@
 import { Form, redirect, useActionData, useNavigation } from "react-router-dom";
 import { createOrder } from "../../services/apiRestaurant";
 import Button from "../../ui/Button";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { clearCart, getCart, getTotalCartPrice } from "../cart/cartSlice";
 import EmptyCart from '../cart/EmptyCart'
 import store from '../../store'
 import { useState } from "react";
+import { fetchAddress } from "../user/userSlice";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) => /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(str);
 
 function CreateOrder() {
-  const username = useSelector(state => state.user.username)
+  const {username, status: addressStatus, position, address, error: errorAddress} = useSelector(state => state.user)
+  const isLoadingAddress = addressStatus === 'loading'
   const [withPriority, setWithPriority] = useState(false);
 
   const cart = useSelector(getCart);
@@ -20,6 +22,8 @@ function CreateOrder() {
 
   const navigation = useNavigation()
   const isSubmitting = navigation.state === 'submitting'
+
+  const dispatch = useDispatch()
 
   const formErrors = useActionData()
 
@@ -43,11 +47,18 @@ function CreateOrder() {
           </div>
         </div>
 
-        <div className="mb-5 flex gap-2 flex-col sm:flex-row sm:items-center">
+        <div className="mb-5 flex gap-2 flex-col sm:flex-row sm:items-center relative">
           <label className="sm:basis-40">Address</label>
           <div className="grow">
-            <input type="text" name="address" required className="input w-full"/>
+            <input type="text" name="address" required disabled={isLoadingAddress} defaultValue={address} className="input w-full"/>
+            {addressStatus === 'error' && <p className="text-xs mt-2 text-red-700 bg-red-100 p-2 rounded-md">{errorAddress}</p>}
           </div>
+          {!position.latitude && !position.longitude && <span className="absolute right-[5px] top-[5px] z-10">
+            <Button type="small" disabled={isLoadingAddress} onClick={(e) => {
+              e.preventDefault()
+              dispatch(fetchAddress())
+            }}>Get position</Button>
+          </span>}
         </div>
 
         <div className="mb-12 flex gap-5 items-center">
