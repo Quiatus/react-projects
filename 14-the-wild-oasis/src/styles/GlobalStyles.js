@@ -1,4 +1,6 @@
-/* Colors adapted from https://tailwindcss.com/docs/customizing-colors */
+import { createGlobalStyle } from "styled-components";
+
+const GlobalSyles = createGlobalStyle`
 
 :root {
   /* Indigo */
@@ -180,4 +182,6 @@ FOR DARK MODE
 
 --image-grayscale: 10%;
 --image-opacity: 90%;
-*/
+*/`
+
+export default GlobalSyles
