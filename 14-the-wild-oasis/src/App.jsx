@@ -2,11 +2,9 @@ import styled from 'styled-components'
 import GlobalSyles from './styles/GlobalStyles'
 
 import Button from './ui/Button'
+import Heading from './ui/Heading'
+import Row from './ui/Row'
 
-const H1 = styled.h1`
-  font-size: 30px;
-  font-weight: 600;
-`
 
  const StyledApp = styled.div`
   background-color: #AAA;
@@ -18,9 +16,11 @@ export default function App() {
     <>
       <GlobalSyles />
       <StyledApp>
-        <H1>The Wild Oasis</H1>
-        <Button onClick={() => alert('Welcome')}>Checkin</Button>
-        <Button onClick={() => alert('Farewell')}>Checkout</Button>
+        <Heading type='h1'>The Wild Oasis</Heading>
+        <Row type="horizontal">
+          <Button variation="primary" size="medium" onClick={() => alert('Welcome')}>Checkin</Button>
+          <Button variation="secondary" size="small" onClick={() => alert('Farewell')}>Checkout</Button>
+        </Row>
       </StyledApp>
     </>
   )
