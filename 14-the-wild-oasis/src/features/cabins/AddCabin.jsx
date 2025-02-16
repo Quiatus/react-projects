@@ -4,7 +4,8 @@ import CreateCabinForm from "./CreateCabinForm";
 import Modal from "../../ui/Modal";
 
 export default function AddCabin() {
-  return <Modal>
+  return <div>
+    <Modal>
     <Modal.Open opens='cabin-form'>
       <Button>Add new cabin</Button>
     </Modal.Open>
@@ -12,6 +13,7 @@ export default function AddCabin() {
       <CreateCabinForm />
     </Modal.Window>
   </Modal>
+  </div>
 }
 
 // export default function AddCabin() {
